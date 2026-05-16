@@ -890,7 +890,7 @@ bot.on('message', async (msg) => {
                     return;
                 }
                 data.password = text;
-                
+
                 // Mijozni Firebase'ga saqlash
                 const newCustomer = {
                     login: data.login,
@@ -903,7 +903,7 @@ bot.on('message', async (msg) => {
                     totalOrders: 0,
                     createdAt: admin.firestore.FieldValue.serverTimestamp(),
                 };
-                
+
                 try {
                     await db.collection('customers').doc(data.login).set(newCustomer);
                     bot.sendMessage(chatId,
