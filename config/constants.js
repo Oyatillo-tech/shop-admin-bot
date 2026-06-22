@@ -1,0 +1,3 @@
+const BONUS_DISCOUNT_PERCENT = 15;
+
+module.exports = { BONUS_DISCOUNT_PERCENT };
